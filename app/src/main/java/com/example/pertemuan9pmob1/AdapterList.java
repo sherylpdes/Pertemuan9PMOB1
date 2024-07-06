@@ -5,6 +5,7 @@ import android.icu.text.Transliterator;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -14,6 +15,15 @@ import java.util.List;
 
 public class AdapterList extends RecyclerView.Adapter<AdapterList.ViewHolder> {
     private List<ItemList> itemList;
+    private OnItemClickListener listener;
+
+    public interface OnItemClickListener{
+        void onItemClick(ItemList item);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener){
+        this.listener = listener;
+    }
 
     public AdapterList(List<ItemList> itemList){
         this.itemList = itemList;
@@ -33,6 +43,15 @@ public class AdapterList extends RecyclerView.Adapter<AdapterList.ViewHolder> {
         holder.judul.setText(item.getJudul());
         holder.subjudul.setText(item.getSubJudul());
         Glide.with(holder.imageView.getContext()).load(item.getImageUrl()).into(holder.imageView);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (listener != null){
+                    listener.onItemClick(item);
+                }
+            }
+        });
     }
 
     @Override

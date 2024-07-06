@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "95850760586",
+    "project_id": "news-b1b94",
+    "storage_bucket": "news-b1b94.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:95850760586:android:67f2baa977b64e9f04e073",
+        "android_client_info": {
+          "package_name": "com.example.pertemuan9pmob1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbRotWxil_3H52zfpU6EQ96HEtC6ekYqs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

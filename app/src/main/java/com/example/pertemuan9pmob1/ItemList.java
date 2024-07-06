@@ -1,9 +1,18 @@
 package com.example.pertemuan9pmob1;
 
 public class ItemList {
+    private String id;
     private String judul;
     private String subJudul;
     private String imageUrl;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public ItemList(String judul, String subJudul, String imageUrl) {
         this.judul = judul;
